@@ -1,0 +1,52 @@
+.pro-scroll-to-top-button-container {
+  position: fixed;
+
+  bottom: -100%;
+  opacity: 0;
+  z-index: -99999;
+  visibility: hidden;
+  transition: opacity .5s, background-color .2s;
+}
+
+.pro-scroll-to-top-button-container.vce {
+  margin: 0 10px 10px 10px;
+}
+
+.pro-scroll-to-top-button-shape--rounded {
+  border-radius: 5px;
+}
+
+.pro-scroll-to-top-button-align--left {
+  left: 0;
+}
+
+.pro-scroll-to-top-button-align--right {
+  right: 0;
+}
+
+.pro-scroll-to-top-button-container[data-vcv-pro-scroll-button-visible="true"] {
+  bottom: 0;
+  z-index: 99999;
+  opacity: 1;
+  visibility: visible;
+}
+
+.pro-scroll-to-top-button-container button.pro-scroll-to-top-button {
+  border: 0;
+  box-shadow: none;
+  text-decoration: none;
+  background: transparent;
+  padding: 9px;
+}
+
+.pro-scroll-to-top-button-container button.pro-scroll-to-top-button:focus {
+  outline: none;
+}
+
+.pro-scroll-to-top-button-icon {
+  vertical-align: middle;
+}
+
+.pro-scroll-to-top-button-icon path {
+  transition: fill .2s;
+}

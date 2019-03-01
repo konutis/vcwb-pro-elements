@@ -1,0 +1,184 @@
+{
+  "background": {
+    "type": "color",
+    "access": "public",
+    "value": "rgba(50,50,50,.6)",
+    "options": {
+      "label": "Button background",
+      "cssMixin": {
+        "mixin": "background",
+        "property": "background",
+        "namePattern": "[\\da-f]+"
+      }
+    }
+  },
+  "hoverBackground": {
+    "type": "color",
+    "access": "public",
+    "value": "rgba(50,50,50,.8)",
+    "options": {
+      "label": "Button hover background",
+      "cssMixin": {
+        "mixin": "hoverBackground",
+        "property": "hoverBackground",
+        "namePattern": "[\\da-f]+"
+      }
+    }
+  },
+  "iconColor": {
+    "type": "color",
+    "access": "public",
+    "value": "rgba(255,255,255, .7)",
+    "options": {
+      "label": "Icon color",
+      "cssMixin": {
+        "mixin": "iconColor",
+        "property": "iconColor",
+        "namePattern": "[\\da-f]+"
+      }
+    }
+  },
+  "iconHoverColor": {
+    "type": "color",
+    "access": "public",
+    "value": "rgba(255,255,255, .9)",
+    "options": {
+      "label": "Icon hover color",
+      "cssMixin": {
+        "mixin": "iconHoverColor",
+        "property": "iconHoverColor",
+        "namePattern": "[\\da-f]+"
+      }
+    }
+  },
+  "shape": {
+    "type": "buttonGroup",
+    "access": "public",
+    "value": "rounded",
+    "options": {
+      "label": "Button shape",
+      "values": [
+        {
+          "label": "Square",
+          "value": "square",
+          "icon": "vcv-ui-icon-attribute-shape-square"
+        },
+        {
+          "label": "Rounded",
+          "value": "rounded",
+          "icon": "vcv-ui-icon-attribute-shape-rounded"
+        }
+      ]
+    }
+  },
+  "visibilityOffset": {
+    "type": "number",
+    "access": "public",
+    "value": "100",
+    "options": {
+      "min": "0",
+      "label": "Visibility offset",
+      "description": "Enter visibility offset when button will become visible in px."
+    }
+  },
+  "alignment": {
+    "type": "buttonGroup",
+    "access": "public",
+    "value": "right",
+    "options": {
+      "label": "Alignment",
+      "values": [
+        {
+          "label": "Left",
+          "value": "left",
+          "icon": "vcv-ui-icon-attribute-alignment-left"
+        },
+        {
+          "label": "Right",
+          "value": "right",
+          "icon": "vcv-ui-icon-attribute-alignment-right"
+        }
+      ]
+    }
+  },
+  "designOptions": {
+    "type": "designOptions",
+    "access": "public",
+    "value": {},
+    "options": {
+      "label": "Design Options"
+    }
+  },
+  "editFormTab1": {
+    "type": "group",
+    "access": "protected",
+    "value": [
+      "visibilityOffset",
+      "background",
+      "hoverBackground",
+      "iconColor",
+      "iconHoverColor",
+      "shape",
+      "alignment",
+      "metaCustomId",
+      "customClass"
+    ],
+    "options": {
+      "label": "General"
+    }
+  },
+  "metaEditFormTabs": {
+    "type": "group",
+    "access": "protected",
+    "value": [
+      "editFormTab1",
+      "designOptions"
+    ]
+  },
+  "relatedTo": {
+    "type": "group",
+    "access": "protected",
+    "value": [
+      "RootElements"
+    ]
+  },
+  "customClass": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Extra class name",
+      "description": "Add an extra class name to the element and refer to it from Custom CSS option."
+    }
+  },
+  "metaCustomId": {
+    "type": "customId",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Element ID",
+      "description": "Apply unique ID to element to link directly to it by using #your_id (for element ID use lowercase input only)."
+    }
+  },
+  "tag": {
+    "access": "protected",
+    "type": "string",
+    "value": "proScrollToTopButton"
+  },
+  "parentWrapper": {
+    "type": "string",
+    "access": "protected",
+    "value": ""
+  },
+  "metaPublicJs": {
+    "access": "protected",
+    "type": "string",
+    "value": {
+      "libraries": [
+        {
+          "libPaths": "public/dist/proScrollToTopScript.min.js"
+        }
+      ]
+    }
+  }
+}

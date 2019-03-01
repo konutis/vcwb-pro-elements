@@ -1,0 +1,19 @@
+{
+  "elements": {
+    "proScrollToTopButton": {
+      "settings": {
+        "name": "Pro Scroll To Top Button",
+        "metaThumbnailUrl": "[publicPath]/thumbnail-pro-scroll-to-top.png",
+        "metaPreviewUrl": "[publicPath]/preview-pro-scroll-to-top.png",
+        "metaDescription": "Add scroll to top button at the bottom of your page."
+      }
+    }
+  },
+  "categories": {
+    "Button": {
+      "elements": [
+        "proScrollToTopButton"
+      ]
+    }
+  }
+}
