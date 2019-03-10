@@ -1,0 +1,103 @@
+.pro-heading-inner {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.pro-heading-wrapper {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.pro-heading-link,
+.pro-heading-link:hover,
+.pro-heading-link:focus,
+.pro-heading-link:visited {
+  border: none;
+  text-decoration: inherit;
+  color: inherit;
+  background: inherit;
+}
+
+.pro-heading--align-center {
+  text-align: center;
+}
+
+.pro-heading--align-right {
+  text-align: right;
+}
+
+.pro-heading--align-left {
+  text-align: left;
+}
+
+/* devices */
+@media (max-width: 543px) {
+  .pro-heading--xs-align-center {
+    text-align: center;
+  }
+
+  .pro-heading--xs-align-right {
+    text-align: right;
+  }
+
+  .pro-heading--xs-align-left {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 544px) {
+  .pro-heading--sm-align-center {
+    text-align: center;
+  }
+
+  .pro-heading--sm-align-right {
+    text-align: right;
+  }
+
+  .pro-heading--sm-align-left {
+    text-align: left;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .pro-heading--md-align-center {
+    text-align: center;
+  }
+
+  .pro-heading--md-align-right {
+    text-align: right;
+  }
+
+  .pro-heading--md-align-left {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .pro-heading--lg-align-center {
+    text-align: center;
+  }
+
+  .pro-heading--lg-align-right {
+    text-align: right;
+  }
+
+  .pro-heading--lg-align-left {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pro-heading--xl-align-center {
+    text-align: center;
+  }
+
+  .pro-heading--xl-align-right {
+    text-align: right;
+  }
+
+  .pro-heading--xl-align-left {
+    text-align: left;
+  }
+}
+

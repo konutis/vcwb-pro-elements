@@ -1,0 +1,1227 @@
+{
+  "text": {
+    "type": "string",
+    "access": "public",
+    "value": "If you never fail - you're not riding fast enough.",
+    "options": {
+      "label": "Heading text",
+      "inline": true,
+      "inlineMode": "text"
+    }
+  },
+  "font": {
+    "type": "googleFonts",
+    "access": "public",
+    "value": {
+      "fontFamily": "Metal Mania",
+      "fontStyle": {
+        "weight": "400",
+        "style": "regular"
+      }
+    }
+  },
+  "elementTag": {
+    "type": "dropdown",
+    "access": "public",
+    "value": "h2",
+    "options": {
+      "label": "Element tag",
+      "values": [
+        {
+          "label": "h1",
+          "value": "h1"
+        },
+        {
+          "label": "h2",
+          "value": "h2"
+        },
+        {
+          "label": "h3",
+          "value": "h3"
+        },
+        {
+          "label": "h4",
+          "value": "h4"
+        },
+        {
+          "label": "h5",
+          "value": "h5"
+        },
+        {
+          "label": "h6",
+          "value": "h6"
+        },
+        {
+          "label": "p",
+          "value": "p"
+        },
+        {
+          "label": "div",
+          "value": "div"
+        }
+      ]
+    }
+  },
+  "colorType": {
+    "type": "dropdown",
+    "access": "public",
+    "value": "gradient",
+    "options": {
+      "label": "Gradient overlay type",
+      "values": [
+        {
+          "label": "Color",
+          "value": "color"
+        },
+        {
+          "label": "Gradient",
+          "value": "gradient"
+        }
+      ]
+    }
+  },
+  "color": {
+    "type": "color",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Title color",
+      "cssMixin": {
+        "mixin": "textColor",
+        "property": "color",
+        "namePattern": "[\\da-f]+"
+      },
+      "onChange": {
+        "rules": {
+          "colorType": {
+            "rule": "value",
+            "options": {
+              "value": "color"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "gradientStart": {
+    "type": "color",
+    "access": "public",
+    "value": " #FF827B",
+    "options": {
+      "label": "Start color",
+      "cssMixin": {
+        "mixin": "textColor",
+        "property": "gradientStart",
+        "namePattern": "[\\da-f]+"
+      },
+      "onChange": {
+        "rules": {
+          "colorType": {
+            "rule": "value",
+            "options": {
+              "value": "gradient"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "gradientEnd": {
+    "type": "color",
+    "access": "public",
+    "value": " #005FFF",
+    "options": {
+      "label": "End color",
+      "cssMixin": {
+        "mixin": "textColor",
+        "property": "gradientEnd",
+        "namePattern": "[\\da-f]+"
+      },
+      "onChange": {
+        "rules": {
+          "colorType": {
+            "rule": "value",
+            "options": {
+              "value": "gradient"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "gradientAngle": {
+    "type": "range",
+    "access": "public",
+    "value": "90",
+    "options": {
+      "label": "Gradient angle",
+      "cssMixin": {
+        "mixin": "textColor",
+        "property": "gradientAngle",
+        "namePattern": "[\\d\\-]+"
+      },
+      "min": 0,
+      "max": 180,
+      "measurement": "°",
+      "onChange": {
+        "rules": {
+          "colorType": {
+            "rule": "value",
+            "options": {
+              "value": "gradient"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "devicesSettings": {
+    "type": "dropdown",
+    "access": "public",
+    "value": "all",
+    "options": {
+      "label": "Device type",
+      "values": [
+        {
+          "label": "All",
+          "value": "all"
+        },
+        {
+          "label": "Custom",
+          "value": "custom"
+        }
+      ]
+    }
+  },
+  "customDevices": {
+    "type": "buttonGroup",
+    "access": "public",
+    "value": "xl",
+    "options": {
+      "label": "Device type",
+      "values": [
+        {
+          "label": "Desktop",
+          "value": "xl",
+          "text": "XL"
+        },
+        {
+          "label": "Tablet Landscape",
+          "value": "lg",
+          "text": "LG"
+        },
+        {
+          "label": "Tablet Portrait",
+          "value": "md",
+          "text": "MD"
+        },
+        {
+          "label": "Mobile Landscape",
+          "value": "sm",
+          "text": "SM"
+        },
+        {
+          "label": "Mobile Portrait",
+          "value": "xs",
+          "text": "XS"
+        }
+      ],
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "fontSize": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Font size",
+      "cssMixin": {
+        "mixin": "fontSize",
+        "property": "fontSize"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "all"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "fontSizeXS": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Font size",
+      "cssMixin": {
+        "mixin": "fontSizeXS",
+        "property": "fontSizeXS"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "xs"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "fontSizeSM": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Font size",
+      "cssMixin": {
+        "mixin": "fontSizeSM",
+        "property": "fontSizeSM"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "sm"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "fontSizeMD": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Font size",
+      "cssMixin": {
+        "mixin": "fontSizeMD",
+        "property": "fontSizeMD"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "md"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "fontSizeLG": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Font size",
+      "cssMixin": {
+        "mixin": "fontSizeLG",
+        "property": "fontSizeLG"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "lg"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "fontSizeXL": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Font size",
+      "cssMixin": {
+        "mixin": "fontSizeXL",
+        "property": "fontSizeXL"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "xl"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "lineHeight": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Line height",
+      "cssMixin": {
+        "mixin": "lineHeight",
+        "property": "lineHeight"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "all"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "lineHeightXS": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Line height",
+      "cssMixin": {
+        "mixin": "lineHeightXS",
+        "property": "lineHeightXS"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "xs"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "lineHeightSM": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Line height",
+      "cssMixin": {
+        "mixin": "lineHeightSM",
+        "property": "lineHeightSM"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "sm"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "lineHeightMD": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Line height",
+      "cssMixin": {
+        "mixin": "lineHeightMD",
+        "property": "lineHeightMD"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "md"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "lineHeightLG": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Line height",
+      "cssMixin": {
+        "mixin": "lineHeightLG",
+        "property": "lineHeightLG"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "lg"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "lineHeightXL": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Line height",
+      "cssMixin": {
+        "mixin": "lineHeightXL",
+        "property": "lineHeightXL"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "xl"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "letterSpacing": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Letter spacing",
+      "cssMixin": {
+        "mixin": "letterSpacing",
+        "property": "letterSpacing"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "all"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "letterSpacingXS": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Letter spacing",
+      "cssMixin": {
+        "mixin": "letterSpacingXS",
+        "property": "letterSpacingXS"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "xs"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "letterSpacingSM": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Letter spacing",
+      "cssMixin": {
+        "mixin": "letterSpacingSM",
+        "property": "letterSpacingSM"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "sm"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "letterSpacingMD": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Letter spacing",
+      "cssMixin": {
+        "mixin": "letterSpacingMD",
+        "property": "letterSpacingMD"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "md"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "letterSpacingLG": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Letter spacing",
+      "cssMixin": {
+        "mixin": "letterSpacingLG",
+        "property": "letterSpacingLG"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "lg"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "letterSpacingXL": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Letter spacing",
+      "cssMixin": {
+        "mixin": "letterSpacingXL",
+        "property": "letterSpacingXL"
+      },
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "xl"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "alignment": {
+    "type": "buttonGroup",
+    "access": "public",
+    "value": "left",
+    "options": {
+      "label": "Alignment",
+      "values": [
+        {
+          "label": "Left",
+          "value": "left",
+          "icon": "vcv-ui-icon-attribute-alignment-left"
+        },
+        {
+          "label": "Center",
+          "value": "center",
+          "icon": "vcv-ui-icon-attribute-alignment-center"
+        },
+        {
+          "label": "Right",
+          "value": "right",
+          "icon": "vcv-ui-icon-attribute-alignment-right"
+        }
+      ],
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "all"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "alignmentXS": {
+    "type": "buttonGroup",
+    "access": "public",
+    "value": "left",
+    "options": {
+      "label": "Alignment",
+      "values": [
+        {
+          "label": "Left",
+          "value": "left",
+          "icon": "vcv-ui-icon-attribute-alignment-left"
+        },
+        {
+          "label": "Center",
+          "value": "center",
+          "icon": "vcv-ui-icon-attribute-alignment-center"
+        },
+        {
+          "label": "Right",
+          "value": "right",
+          "icon": "vcv-ui-icon-attribute-alignment-right"
+        }
+      ],
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "xs"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "alignmentSM": {
+    "type": "buttonGroup",
+    "access": "public",
+    "value": "left",
+    "options": {
+      "label": "Alignment",
+      "values": [
+        {
+          "label": "Left",
+          "value": "left",
+          "icon": "vcv-ui-icon-attribute-alignment-left"
+        },
+        {
+          "label": "Center",
+          "value": "center",
+          "icon": "vcv-ui-icon-attribute-alignment-center"
+        },
+        {
+          "label": "Right",
+          "value": "right",
+          "icon": "vcv-ui-icon-attribute-alignment-right"
+        }
+      ],
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "sm"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "alignmentMD": {
+    "type": "buttonGroup",
+    "access": "public",
+    "value": "left",
+    "options": {
+      "label": "Alignment",
+      "values": [
+        {
+          "label": "Left",
+          "value": "left",
+          "icon": "vcv-ui-icon-attribute-alignment-left"
+        },
+        {
+          "label": "Center",
+          "value": "center",
+          "icon": "vcv-ui-icon-attribute-alignment-center"
+        },
+        {
+          "label": "Right",
+          "value": "right",
+          "icon": "vcv-ui-icon-attribute-alignment-right"
+        }
+      ],
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "md"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "alignmentLG": {
+    "type": "buttonGroup",
+    "access": "public",
+    "value": "left",
+    "options": {
+      "label": "Alignment",
+      "values": [
+        {
+          "label": "Left",
+          "value": "left",
+          "icon": "vcv-ui-icon-attribute-alignment-left"
+        },
+        {
+          "label": "Center",
+          "value": "center",
+          "icon": "vcv-ui-icon-attribute-alignment-center"
+        },
+        {
+          "label": "Right",
+          "value": "right",
+          "icon": "vcv-ui-icon-attribute-alignment-right"
+        }
+      ],
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "lg"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "alignmentXL": {
+    "type": "buttonGroup",
+    "access": "public",
+    "value": "left",
+    "options": {
+      "label": "Alignment",
+      "values": [
+        {
+          "label": "Left",
+          "value": "left",
+          "icon": "vcv-ui-icon-attribute-alignment-left"
+        },
+        {
+          "label": "Center",
+          "value": "center",
+          "icon": "vcv-ui-icon-attribute-alignment-center"
+        },
+        {
+          "label": "Right",
+          "value": "right",
+          "icon": "vcv-ui-icon-attribute-alignment-right"
+        }
+      ],
+      "onChange": {
+        "rules": {
+          "devicesSettings": {
+            "rule": "value",
+            "options": {
+              "value": "custom"
+            }
+          },
+          "customDevices": {
+            "rule": "value",
+            "options": {
+              "value": "xl"
+            }
+          }
+        },
+        "actions": [
+          {
+            "action": "toggleVisibility"
+          }
+        ]
+      }
+    }
+  },
+  "link": {
+    "type": "url",
+    "access": "public",
+    "value": {
+      "url": "",
+      "title": "",
+      "targetBlank": true,
+      "relNofollow": false
+    },
+    "options": {
+      "label": "Link selection"
+    }
+  },
+  "customClass": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Extra class name",
+      "description": "Add an extra class name to the element and refer to it from Custom CSS option."
+    }
+  },
+  "metaCustomId": {
+    "type": "customId",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Element ID",
+      "description": "Apply unique Id to element to link directly to it by using #your_id (for element id use lowercase input only)."
+    }
+  },
+  "designOptions": {
+    "type": "designOptions",
+    "access": "public",
+    "value": {},
+    "options": {
+      "label": "Design Options"
+    }
+  },
+  "editFormTab1": {
+    "type": "group",
+    "access": "protected",
+    "value": [
+      "text",
+      "font",
+      "elementTag",
+      "colorType",
+      "color",
+      "gradientStart",
+      "gradientEnd",
+      "gradientAngle",
+      "link",
+      "metaCustomId",
+      "customClass"
+    ],
+    "options": {
+      "label": "General"
+    }
+  },
+  "fontSettingPanel": {
+    "type": "group",
+    "access": "protected",
+    "value": [
+      "devicesSettings",
+      "customDevices",
+      "fontSize",
+      "fontSizeXS",
+      "fontSizeSM",
+      "fontSizeMD",
+      "fontSizeLG",
+      "fontSizeXL",
+      "lineHeight",
+      "lineHeightXS",
+      "lineHeightSM",
+      "lineHeightMD",
+      "lineHeightLG",
+      "lineHeightXL",
+      "letterSpacing",
+      "letterSpacingXS",
+      "letterSpacingSM",
+      "letterSpacingMD",
+      "letterSpacingLG",
+      "letterSpacingXL",
+      "alignment",
+      "alignmentXS",
+      "alignmentSM",
+      "alignmentMD",
+      "alignmentLG",
+      "alignmentXL"
+    ],
+    "options": {
+      "label": "Font Settings"
+    }
+  },
+  "metaEditFormTabs": {
+    "type": "group",
+    "access": "protected",
+    "value": [
+      "editFormTab1",
+      "fontSettingPanel",
+      "designOptions"
+    ]
+  },
+  "relatedTo": {
+    "type": "group",
+    "access": "protected",
+    "value": [
+      "General"
+    ]
+  },
+  "tag": {
+    "type": "string",
+    "access": "protected",
+    "value": "proHeading"
+  }
+}

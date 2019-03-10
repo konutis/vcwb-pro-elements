@@ -1,0 +1,19 @@
+.pro-heading {
+  &--color-$selector {
+    .pro-heading-inner {
+      @if $color != false {
+        color: $color;
+      }
+    }
+  }
+  &--gradient-$selector {
+    .pro-heading-inner {
+      @if $gradientStart != false {
+        background-image: linear-gradient($(gradientAngle)deg, $gradientStart, $gradientEnd);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+}

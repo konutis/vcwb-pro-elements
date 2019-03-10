@@ -21,6 +21,7 @@ add_action(
     function ($api) {
         $elementsToRegister = [
             'proScrollToTopButton',
+            'proHeading',
         ];
         $pluginBaseUrl = rtrim(plugins_url(basename(__DIR__)), '\\/');
         /** @var \VisualComposer\Modules\Elements\ApiController $elementsApi */

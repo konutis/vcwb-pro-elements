@@ -1,0 +1,19 @@
+{
+  "elements": {
+    "proHeading": {
+      "settings": {
+        "name": "Pro Heading",
+        "metaThumbnailUrl": "[publicPath]/pro-heading-thumbnail.png",
+        "metaPreviewUrl": "[publicPath]/pro-heading-preview.png",
+        "metaDescription": "Text heading with adjustable font settings for custom devices."
+      }
+    }
+  },
+  "categories": {
+    "Text block": {
+      "elements": [
+        "proHeading"
+      ]
+    }
+  }
+}
