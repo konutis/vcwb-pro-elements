@@ -1,0 +1,63 @@
+.pro-modal-box-container {
+  position: fixed;
+  z-index: -99999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s;
+  align-items: center;
+}
+
+.pro-modal-box-container[data-vcv-pro-modal-box-visible="true"] {
+  visibility: visible;
+  opacity: 1;
+  z-index: 99999;
+  pointer-events: auto;
+  width: auto;
+  height: auto;
+}
+
+.pro-modal-box-container .pro-modal-box {
+  margin: 30px;
+}
+
+.pro-modal-box {
+  background: #eee;
+  position: relative;
+  padding: 30px;
+  overflow-y: auto;
+  border-radius: 5px;
+  flex-grow: 1;
+  width: 0;
+}
+
+.pro-modal-box-container button.pro-modal-box-close-button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  height: 25px;
+  width: 25px;
+  border: 0;
+  box-shadow: none;
+  text-decoration: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.pro-modal-box-container button.pro-modal-box-close-button:focus {
+  outline: none;
+}
+
+.pro-modal-box-close-button svg {
+  transition: fill .2s;
+}

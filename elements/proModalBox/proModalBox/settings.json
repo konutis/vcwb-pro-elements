@@ -1,0 +1,167 @@
+{
+  "modalSelector": {
+    "type": "string",
+    "access": "public",
+    "value": ".pro-modal-box-1 button",
+    "options": {
+      "label": "Open modal element selector",
+      "description": "Use this selector to find an element which will trigger to open modal box."
+    }
+  },
+  "width": {
+    "type": "string",
+    "access": "public",
+    "value": "600px",
+    "options": {
+      "label": "Width",
+      "description": "Enter width in pixels or percentages (Example: 200px)."
+    }
+  },
+  "overlayBackground": {
+    "type": "color",
+    "access": "public",
+    "value": "rgba(0,0,0,.7)",
+    "options": {
+      "label": "Overlay background",
+      "cssMixin": {
+        "mixin": "overlayBackground",
+        "property": "overlayBackground",
+        "namePattern": "[\\da-f]+"
+      }
+    }
+  },
+  "modalBackground": {
+    "type": "color",
+    "access": "public",
+    "value": "#EEEEEE",
+    "options": {
+      "label": "Modal background",
+      "cssMixin": {
+        "mixin": "modalBackground",
+        "property": "modalBackground",
+        "namePattern": "[\\da-f]+"
+      }
+    }
+  },
+  "closeColor": {
+    "type": "color",
+    "access": "public",
+    "value": "#555555",
+    "options": {
+      "label": "Close button color",
+      "cssMixin": {
+        "mixin": "closeColor",
+        "property": "closeColor",
+        "namePattern": "[\\da-f]+"
+      }
+    }
+  },
+  "closeHoverColor": {
+    "type": "color",
+    "access": "public",
+    "value": "#666666",
+    "options": {
+      "label": "Close button hover color",
+      "cssMixin": {
+        "mixin": "closeHoverColor",
+        "property": "closeHoverColor",
+        "namePattern": "[\\da-f]+"
+      }
+    }
+  },
+  "designOptions": {
+    "type": "designOptions",
+    "access": "public",
+    "value": {},
+    "options": {
+      "label": "Design Options"
+    }
+  },
+  "editFormTab1": {
+    "type": "group",
+    "access": "protected",
+    "value": [
+      "modalSelector",
+      "width",
+      "overlayBackground",
+      "modalBackground",
+      "closeColor",
+      "closeHoverColor",
+      "metaCustomId",
+      "customClass"
+    ],
+    "options": {
+      "label": "General"
+    }
+  },
+  "metaEditFormTabs": {
+    "type": "group",
+    "access": "protected",
+    "value": [
+      "editFormTab1",
+      "designOptions"
+    ]
+  },
+  "relatedTo": {
+    "type": "group",
+    "access": "protected",
+    "value": [
+      "RootElements"
+    ]
+  },
+  "containerFor": {
+    "type": "group",
+    "access": "protected",
+    "value": [
+      "Row"
+    ]
+  },
+  "customClass": {
+    "type": "string",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Extra class name",
+      "description": "Add an extra class name to the element and refer to it from Custom CSS option."
+    }
+  },
+  "metaCustomId": {
+    "type": "customId",
+    "access": "public",
+    "value": "",
+    "options": {
+      "label": "Element ID",
+      "description": "Apply unique ID to element to link directly to it by using #your_id (for element ID use lowercase input only)."
+    }
+  },
+  "tag": {
+    "access": "protected",
+    "type": "string",
+    "value": "proModalBox"
+  },
+  "initChildren": {
+    "access": "protected",
+    "type": "object",
+    "value": [
+      {
+        "tag": "row"
+      }
+    ]
+  },
+  "parentWrapper": {
+    "type": "string",
+    "access": "protected",
+    "value": ""
+  },
+  "metaPublicJs": {
+    "access": "protected",
+    "type": "string",
+    "value": {
+      "libraries": [
+        {
+          "libPaths": "public/dist/proModalBoxScript.min.js"
+        }
+      ]
+    }
+  }
+}
