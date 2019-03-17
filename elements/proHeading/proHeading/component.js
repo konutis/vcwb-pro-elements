@@ -4,16 +4,6 @@ import vcCake from 'vc-cake'
 const vcvAPI = vcCake.getService('api')
 
 export default class ProHeadingElement extends vcvAPI.elementComponent {
-  validateSize (value) {
-    let units = [ 'px', 'em', 'rem', '%', 'vw', 'vh' ]
-    let re = new RegExp('^-?\\d*(\\.\\d{0,9})?(' + units.join('|') + ')?$')
-    if (value === '' || value.match(re)) {
-      return value
-    } else {
-      return null
-    }
-  }
-
   render () {
     let { id, atts, editor } = this.props
     let { text, elementTag, font, devicesSettings, alignment, lineHeight, letterSpacing, link, colorType, customClass, metaCustomId } = atts
@@ -46,23 +36,6 @@ export default class ProHeadingElement extends vcvAPI.elementComponent {
 
     if (typeof customClass === 'string' && customClass) {
       classes += ' ' + customClass
-    }
-
-    if (lineHeight) {
-      lineHeight = this.validateSize(lineHeight)
-
-      if (lineHeight) {
-        innerCustomProps.style.lineHeight = lineHeight
-      }
-    }
-
-    if (letterSpacing) {
-      letterSpacing = this.validateSize(letterSpacing)
-
-      if (letterSpacing) {
-        letterSpacing = /^\d+$/.test(letterSpacing) ? letterSpacing + 'px' : letterSpacing
-        innerCustomProps.style.letterSpacing = letterSpacing
-      }
     }
 
     let mixinData = this.getMixinData('textColor')

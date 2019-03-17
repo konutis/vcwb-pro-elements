@@ -11,7 +11,7 @@ export default class ProScrollToTopButton extends vcvAPI.elementComponent {
     let customProps = {}
 
     if (customClass) {
-      containerClasses =+ ` ${customClass}`
+      containerClasses += ` ${customClass}`
     }
 
     if (metaCustomId) {
