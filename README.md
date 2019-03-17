@@ -7,3 +7,8 @@
 - Download VCWB Pro Elements as a zip file
 - Install it on Wordpress
 - Add any Pro Element from VCWB plugin
+
+
+## Elements:
+- proScrollToTopButton
+- proHeading
