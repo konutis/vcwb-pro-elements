@@ -2,7 +2,7 @@
   "elements": {
     "proModalBox": {
       "settings": {
-        "name": "Pro Modal Box",
+        "name": "Pro Modal Box (Popup)",
         "metaThumbnailUrl": "[publicPath]/thumbnail-pro-modal-box.png",
         "metaPreviewUrl": "[publicPath]/preview-pro-modal-box.png",
         "metaDescription": "Open modal box with your own content from any button or element you want."

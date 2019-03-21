@@ -12,11 +12,11 @@
 ## Elements:
 - proScrollToTopButton
 - proHeading
-- proModalBox
+- proModalBox (popup)
 
 
 ## Additional element usage
-### proModalBox
+### proModalBox (popup)
 After adding this element you will not see it because it is hidden by default. There is parameter "Open modal element selector" which you have to use to find the element which will trigger opening the Modal Box. Selector will be used via Javascript as a "querySelectorAll".
 Basic example to make it work:
 1. Add Pro Modal Box
