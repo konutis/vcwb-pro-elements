@@ -2,7 +2,7 @@ import React from 'react'
 import vcCake from 'vc-cake'
 const vcvAPI = vcCake.getService('api')
 
-export default class ProScrollToTopButton extends vcvAPI.elementComponent {
+export default class ProModalBox extends vcvAPI.elementComponent {
   validateSize (value) {
     let units = [ 'px', 'em', 'rem', '%', 'vw', 'vh' ]
     let re = new RegExp('^-?\\d*(\\.\\d{0,9})?(' + units.join('|') + ')?$')
