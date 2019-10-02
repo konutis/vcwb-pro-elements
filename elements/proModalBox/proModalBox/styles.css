@@ -24,6 +24,8 @@
   pointer-events: auto;
   width: auto;
   height: auto;
+  max-width: none;
+  margin: 0;
 }
 
 .pro-modal-box-container .pro-modal-box {
