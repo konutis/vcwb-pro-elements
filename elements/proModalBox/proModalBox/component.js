@@ -17,7 +17,7 @@ export default class ProModalBox extends vcvAPI.elementComponent {
     let { id, atts, editor, children } = this.props
     let { modalSelector, width, customClass, metaCustomId } = atts
     let containerClasses = 'pro-modal-box-container'
-    let innerClasses = 'pro-modal-box vce'
+    let innerClasses = 'pro-modal-box vce vce-full-width-custom-container'
     let customProps = {
       'data-vce-pro-modal-selector': modalSelector
     }
