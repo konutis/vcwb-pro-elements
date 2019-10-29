@@ -32,5 +32,6 @@ Thumbs.db
 .vscode
 
 elements/**/node_modules
+elements/**/public/dist/vendor.bundle.js
 node_modules
 npm-debug.log
