@@ -93,7 +93,7 @@
     "eslint-plugin-standard": "3.0.1",
     "event-emitter": "0.3.5",
     "form-serialize": "0.7.2",
-    "handlebars": "4.0.11",
+    "handlebars": "4.7.6",
     "htmlhint": "0.9.13",
     "immutable": "3.8.2",
     "imports-loader": "0.8.0",
